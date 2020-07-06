@@ -66,11 +66,11 @@ jobs:
       - name: Upload Artifact Targets
         uses: actions/upload-artifact@master
         with:
-          name: Lean.OpenWRT-R2S.Targets
+          name: Lean.OpenWRT-X86_64.Targets
           path: lede/bin/targets/
 
       - name: Upload Artifact Packages
         uses: actions/upload-artifact@master
         with:
-          name: Lean.OpenWRT-R2S.Packages
+          name: Lean.OpenWRT-X86_64.Packages
           path: lede/bin/packages/
