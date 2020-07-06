@@ -46,7 +46,7 @@ jobs:
       - name: Enable Autocore
         run: |
           cd lede/
-          git apply ../patch/Enable_autocoreA.diff
+          git apply ../patch/Enable_autocore.diff
           
       - name: Generate Configuration File
         run: |
