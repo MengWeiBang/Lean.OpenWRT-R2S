@@ -63,8 +63,14 @@ jobs:
           du -h --max-depth=1 ./build_dir
           du -h --max-depth=1 ./bin
           
-      - name: Upload Artifact
+      - name: Upload Artifact Targets
         uses: actions/upload-artifact@master
         with:
-          name: Lean.OpenWRT-X86_64
-          path: lede/bin/
+          name: Lean.OpenWRT-R2S.Targets
+          path: lede/bin/targets/
+
+      - name: Upload Artifact Packages
+        uses: actions/upload-artifact@master
+        with:
+          name: Lean.OpenWRT-R2S.Packages
+          path: lede/bin/packages/
