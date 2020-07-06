@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build OpenWRT and release
+    name: Build OpenWRT
     runs-on: ubuntu-18.04
 
     steps:
