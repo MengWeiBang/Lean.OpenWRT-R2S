@@ -1,15 +1,10 @@
 name: Lean.OpenWRT-X86_64
 
 on:
-  push:
-    paths:
-      - 'Build-number'
-    tags-ignore:
-      - Build-X64*
- # schedule:
- #   - cron: '00 09 * * *'
- # watch:
- #  types: started
+  schedule:
+    - cron: '00 10 * * *'
+  watch:
+   types: started
 
 jobs:
   build:
