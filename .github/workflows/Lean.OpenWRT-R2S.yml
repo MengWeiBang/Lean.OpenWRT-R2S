@@ -1,17 +1,17 @@
 name: Lean.OpenWRT-R2S
 
 on:
- # push:
+  push:
  #   branches:
  #     - master
- #   paths:
- #     - 'build-number'
- #   tags-ignore:
- #     - build*
+    paths:
+      - 'build/Build-number-R2S'
+    tags-ignore:
+      - build*
  # schedule:
  #   - cron: '00 09 * * *'
-  watch:
-   types: started
+ # watch:
+ #  types: started
 
 jobs:
   build:
