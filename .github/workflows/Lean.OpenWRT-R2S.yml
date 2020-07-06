@@ -2,8 +2,6 @@ name: Lean.OpenWRT-R2S
 
 on:
   push:
- #   branches:
- #     - master
     paths:
       - 'Build-number'
     tags-ignore:
