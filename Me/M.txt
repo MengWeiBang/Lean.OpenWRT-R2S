@@ -1,0 +1,36 @@
+###BBR
+
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+
+sysctl -p
+sysctl net.ipv4.tcp_available_congestion_control
+sysctl -n net.ipv4.tcp_congestion_control
+
+lsmod | grep bbr
+
+###OPKG源
+
+官方源
+src/gz openwrt_core https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa53/packages
+src/gz openwrt_base https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/base
+src/gz openwrt_packages https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/packages
+src/gz openwrt_routing https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/routing
+src/gz openwrt_telephony https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/telephony
+中科大源
+src/gz openwrt_core https://openwrt.proxy.ustclug.org/snapshots/targets/sunxi/cortexa53/packages
+src/gz openwrt_base https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/base
+src/gz openwrt_packages https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/packages
+src/gz openwrt_routing https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/routing
+src/gz openwrt_telephony https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/telephony
+
+###kcptun格式
+
+--crypt none --mode fast --sndwnd 512 --rcvwnd 1024 --dscp 1 --nocomp true
+
+key=onex;crypt=none;mode=fast;sndwnd=512;rcvwnd=1024;nocomp=true;dscp=1
+
+###
+svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
+cat ../config/feeds.conf.default > feeds.conf.default
+sed -i 's/#src-git/src-git/g' feeds.conf.default
