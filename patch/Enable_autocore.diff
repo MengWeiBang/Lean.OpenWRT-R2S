@@ -45,7 +45,7 @@ index 19ea5fb2..60e7acda 100755
 +	MHz=`echo "$(cat /sys/devices/system/cpu/cpu[04]/cpufreq/cpuinfo_cur_freq)/1000" | bc`
  	#获取CPU工作频率
  
- 	sensors >/dev/null
+ 	sensors 2>/dev/null
 @@ -12,7 +12,7 @@ info()
  		#获取CPU核心1温度
  
