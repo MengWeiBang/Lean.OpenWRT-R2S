@@ -5,9 +5,9 @@ on:
  #   branches:
  #     - master
     paths:
-      - 'build/Build-number-R2S'
+      - 'Build-number'
     tags-ignore:
-      - build*
+      - Build-R2S*
  # schedule:
  #   - cron: '00 09 * * *'
  # watch:
