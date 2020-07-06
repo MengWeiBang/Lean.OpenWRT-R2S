@@ -35,12 +35,7 @@ jobs:
           sed -i 's/#src-git/src-git/g' feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-
-      - name: Enable Autocore
-        run: |
-          cd lede/
-          git apply ../patch/Enable_autocore.diff
-          
+    
       - name: Generate Configuration File
         run: |
           cp config/CONFIG_R2S lede/.config
