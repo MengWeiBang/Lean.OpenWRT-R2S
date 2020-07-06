@@ -43,10 +43,10 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Enable Autocore
-        run: |
-          cd lede/
-          git apply ../patch/Enable_autocore.diff
+      #- name: Enable Autocore
+      #  run: |
+      #    cd lede/
+      #    git apply ../patch/Enable_autocore.diff
           
       - name: Generate Configuration File
         run: |
