@@ -43,10 +43,10 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      #- name: Enable Autocore
-      #  run: |
-      #    cd lede/
-      #    git apply ../patch/Enable_autocore.diff
+      - name: Enable Autocore
+        run: |
+          cd lede/
+          git apply ../patch/Enable_autocore.diff
           
       - name: Generate Configuration File
         run: |
@@ -79,14 +79,8 @@ jobs:
           name: Lean.OpenWRT-R2S.ROM
           path: ArtifactROM
 
-      - name: Upload Artifact Targets
+      - name: Upload Artifact All
         uses: actions/upload-artifact@master
         with:
-          name: Lean.OpenWRT-R2S.Targets
-          path: lede/bin/targets/
-
-      - name: Upload Artifact Packages
-        uses: actions/upload-artifact@master
-        with:
-          name: Lean.OpenWRT-R2S.Packages
-          path: lede/bin/packages/
+          name: Lean.OpenWRT-R2S.All
+          path: lede/bin/
