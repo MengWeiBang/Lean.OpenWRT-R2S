@@ -10,8 +10,8 @@ on:
  #     - build*
  # schedule:
  #   - cron: '00 09 * * *'
-  watch:
-   types: started
+ # watch:
+ #  types: started
 
 jobs:
   build:
