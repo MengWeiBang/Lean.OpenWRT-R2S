@@ -36,7 +36,7 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           
-      - name: Generate Configuration File
+      - name: Customization Configuration
         run: |
           cp config/CONFIG_X86_64 lede/.config
           
