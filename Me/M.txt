@@ -15,7 +15,7 @@ src/gz openwrt_telephony https://openwrt.proxy.ustclug.org/snapshots/packages/aa
 ssrp
 --crypt none --mode fast --sndwnd 512 --rcvwnd 1024 --dscp 1 --nocomp true
 OneX
-key=onex;crypt=none;mode=fast;sndwnd=512;rcvwnd=1024;nocomp=true;dscp=1
+key=onex;crypt=none;mode=fast;sndwnd=512;rcvwnd=1024;dscp=1;nocomp=true
 ###
 sed -i 's/#src-git/src-git/g' feeds.conf.default
 cat ../config/feeds.conf.default > feeds.conf.default
