@@ -26,7 +26,4 @@ cat /sys/devices/system/cpu/cpu[04]/cpufreq/cpuinfo_cur_freq
 CPU温度
 cat /sys/class/thermal/thermal_zone0/temp
 ###
-noEA
-sed -i 's/<%=pcdata(boardinfo.system or "?")%>/ARMv8 Cortex-A53 1.5GHz/g' /usr/lib/lua/luci/view/admin_status/index.htm
-EA
-sed -i 's/<td id="cpuinfo">-</td>/<td>ARMv8 Cortex-A53 1.5GHz x 4</td>/g' /usr/lib/lua/luci/view/admin_status/index.htm
+<tr><td width="33%">CPU <%:Architecture%></td><td>ARMv8 Cortex-A53 x 4 <%=luci.sys.exec("cat /sys/class/thermal/thermal_zone0/temp")/1000 or ""%>℃</td></tr>
