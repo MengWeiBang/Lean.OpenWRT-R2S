@@ -35,7 +35,6 @@ jobs:
           sed -i 's/#src-git/src-git/g' feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-          sed -i 's/<%=pcdata(boardinfo.system or "?")%>/ARMv8 Cortex-A53/g' /usr/lib/lua/luci/view/admin_status/index.htm
     
       - name: Generate Configuration File
         run: |
