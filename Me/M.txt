@@ -27,6 +27,6 @@ CPU温度
 cat /sys/class/thermal/thermal_zone0/temp
 ###
 noEA
-sed -i 's/<%=pcdata(boardinfo.system or "?")%>/ARMv8 Cortex-A53/g' /usr/lib/lua/luci/view/admin_status/index.htm
+sed -i 's/<%=pcdata(boardinfo.system or "?")%>/ARMv8 Cortex-A53 1.5GHz/g' /usr/lib/lua/luci/view/admin_status/index.htm
 EA
-sed -i 's/<td id="cpuinfo">-</td>>/<td>ARMv8 Cortex-A53 x 4</td>/g' /usr/lib/lua/luci/view/admin_status/index.htm
+sed -i 's/<td id="cpuinfo">-</td>/<td>ARMv8 Cortex-A53 1.5GHz x 4</td>/g' /usr/lib/lua/luci/view/admin_status/index.htm
