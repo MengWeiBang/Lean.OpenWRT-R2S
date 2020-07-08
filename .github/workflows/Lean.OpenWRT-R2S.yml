@@ -39,7 +39,7 @@ jobs:
       - name: Customization Configuration
         run: |
           cp config/CONFIG_R2S lede/.config
-          chmod +x Customize.sh && sh Customize.sh
+          chmod +x config/Customize.sh && sh config/Customize.sh
 
       - name: Build OpenWRT
         run: |
