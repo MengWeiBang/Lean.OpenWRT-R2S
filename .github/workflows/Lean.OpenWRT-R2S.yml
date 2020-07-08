@@ -57,17 +57,6 @@ jobs:
           du -h --max-depth=1 ./build_dir
           du -h --max-depth=1 ./bin
 
-      - name: Assemble Artifact ROM
-        run: |
-          mkdir ArtifactROM
-          cp lede/bin/targets/rockchip/armv8/openwrt* ArtifactROM
-          
-      - name: Upload Artifact ROM
-        uses: actions/upload-artifact@master
-        with:
-          name: Lean.OpenWRT-R2S.ROM
-          path: ArtifactROM
-
       - name: Upload Artifact All
         uses: actions/upload-artifact@master
         with:
