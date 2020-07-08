@@ -26,4 +26,4 @@ cat /sys/devices/system/cpu/cpu[04]/cpufreq/cpuinfo_cur_freq
 CPU温度
 cat /sys/class/thermal/thermal_zone0/temp
 ###
-<tr><td width="33%">CPU <%:Architecture%></td><td>ARMv8 Cortex-A53 x 4 <%=luci.sys.exec("cat /sys/class/thermal/thermal_zone0/temp")/1000 or ""%>℃</td></tr>
+<tr><td width="33%">CPU <%:Architecture%></td><td>ARMv8 Cortex-A53 x 4</td></tr>
