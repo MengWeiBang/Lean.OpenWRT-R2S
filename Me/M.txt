@@ -3,14 +3,10 @@
 src/gz openwrt_core https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/packages
 src/gz openwrt_base https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/base
 src/gz openwrt_packages https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/packages
-src/gz openwrt_routing https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/routing
-src/gz openwrt_telephony https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/telephony
 中科大源
 src/gz openwrt_core https://openwrt.proxy.ustclug.org/snapshots/targets/rockchip/armv8/packages
 src/gz openwrt_base https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/base
 src/gz openwrt_packages https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/packages
-src/gz openwrt_routing https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/routing
-src/gz openwrt_telephony https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/telephony
 ###
 ssrp
 --crypt none --mode fast --sndwnd 512 --rcvwnd 1024 --dscp 1 --nocomp true
