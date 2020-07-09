@@ -1,4 +1,4 @@
-# [Lean官方源码](https://github.com/coolsnowwolf/lede)+[Package-S](https://github.com/fw876/helloworld)编译OpenWRT
+[Lean官方源码](https://github.com/coolsnowwolf/lede)+[Package-S](https://github.com/fw876/helloworld)编译OpenWRT
 
 1、主题=netgear
 
