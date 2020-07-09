@@ -50,9 +50,7 @@ jobs:
           make -j$(nproc) || make -j1 V=s
           
       - name: Upload Artifact All
-        env: 
-          date: $(date +%Y-%m-%d)
         uses: actions/upload-artifact@master
         with:
-          name: Lean.OpenWRT-amd64-$date.All
+          name: Lean.OpenWRT-amd64.All
           path: lede/bin/
