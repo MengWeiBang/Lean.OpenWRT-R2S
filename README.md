@@ -10,4 +10,4 @@
 
 5、Me文件夹内容与编译无关。
 
-# [R2S]（https://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=282）修复autocore实时显示CPU频率和温度。
+# [R2S](https://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=282)修复autocore实时显示CPU频率和温度。
