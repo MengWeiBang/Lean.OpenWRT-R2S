@@ -1,5 +1,7 @@
 # [Lean官方源码](https://github.com/coolsnowwolf/lede)编译OpenWRT
 
+[Package-S](https://github.com/fw876/helloworld)
+
 1、主题=netgear
 
 2、地址=192.168.2.1
