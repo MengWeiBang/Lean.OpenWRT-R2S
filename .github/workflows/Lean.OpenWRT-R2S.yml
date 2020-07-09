@@ -1,8 +1,8 @@
 name: Lean.OpenWRT-R2S
 
 on:
-  #schedule:
-  # - cron: '00 10 * * *'
+  schedule:
+    - cron: '00 09 * * *'
   watch:
    types: started
 
@@ -27,7 +27,7 @@ jobs:
           sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs gcc-multilib g++-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler antlr3 gperf swig
           sudo apt-get -y autoremove --purge
           sudo apt-get clean
-
+          
       - name: Get Source Code
         run: |
           git clone https://github.com/coolsnowwolf/lede.git
@@ -35,12 +35,17 @@ jobs:
           sed -i 's/#src-git/src-git/g' feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-    
+          
+      - name: Enable Autocore
+        run: |
+          cd lede/
+          git apply ../All/Autocore.diff
+  
       - name: Customization Configuration
         run: |
-          cp config/CONFIG_R2S lede/.config
-          chmod +x config/Customize.sh && sh config/Customize.sh
-
+          cp All/CONFIG_R2S lede/.config
+          chmod +x All/Customize.sh && sh All/Customize.sh
+          
       - name: Build OpenWRT
         run: |
           cd lede/
@@ -48,15 +53,7 @@ jobs:
           make download -j8
           find dl -size -1024c -exec rm -f {} \;
           make -j$(nproc) || make -j1 V=s
-          echo "======================="
-          echo "Space usage:"
-          echo "======================="
-          df -h
-          echo "======================="
-          du -h --max-depth=1 ./ --exclude=build_dir --exclude=bin
-          du -h --max-depth=1 ./build_dir
-          du -h --max-depth=1 ./bin
-
+          
       - name: Upload Artifact All
         uses: actions/upload-artifact@master
         with:
