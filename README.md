@@ -1,5 +1,4 @@
 # [Lean官方源码](https://github.com/coolsnowwolf/lede)编译OpenWRT
-源码来自 [Lean-OpenWRT](https://github.com/coolsnowwolf/lede)
 
 1、主题=netgear
 
