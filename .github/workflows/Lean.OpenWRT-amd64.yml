@@ -1,4 +1,4 @@
-name: Lean.OpenWRT-X86_64
+name: Lean.OpenWRT-amd64
 
 on:
   #schedule:
@@ -38,7 +38,7 @@ jobs:
           
       - name: Customization Configuration
         run: |
-          cp All/CONFIG_X86_64 lede/.config
+          cp All/CONFIG_amd64 lede/.config
           chmod +x All/Customize.sh && sh All/Customize.sh
           
       - name: Build OpenWRT
@@ -52,5 +52,5 @@ jobs:
       - name: Upload Artifact All
         uses: actions/upload-artifact@master
         with:
-          name: Lean.OpenWRT-X86_64.All
+          name: Lean.OpenWRT-amd64.All
           path: lede/bin/
