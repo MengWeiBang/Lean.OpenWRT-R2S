@@ -6,8 +6,6 @@
 
 3、密码=password
 
-4、系统盘≥2GB
-
-5、Me文件夹内容与编译无关。
+4、系统盘≥64GB
 
 [R2S](https://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=282)修复autocore实时显示CPU频率和温度。
