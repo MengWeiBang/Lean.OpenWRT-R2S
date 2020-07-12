@@ -61,4 +61,4 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: Lean.OpenWRT-R2S
-          path: lede/bin/targets/
+          path: lede/bin/targets/*/*/
