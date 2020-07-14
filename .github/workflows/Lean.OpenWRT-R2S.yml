@@ -32,7 +32,7 @@ jobs:
         run: |
           git clone https://github.com/coolsnowwolf/lede.git
           cd lede/
-          sed -i 's/#src-git/src-git/g' feeds.conf.default
+          sed -i 's/#src-git helloworld/src-git helloworld/g' feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           
