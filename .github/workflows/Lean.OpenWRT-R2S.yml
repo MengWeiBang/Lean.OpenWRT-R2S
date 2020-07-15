@@ -39,7 +39,7 @@ jobs:
       - name: Optimize Configuration
         run: |
           cd lede/
-          git apply ../All/Autocore.diff
+          git apply ../All/EnableAutocore.diff
           git apply ../All/SwapPort.diff
           git apply ../All/OptimizePerformance.diff
           
