@@ -40,8 +40,8 @@ jobs:
         run: |
           cd lede/
           git apply ../All/EnableAutocore.diff
-          git apply ../All/SwapPort.diff
-          git apply ../All/OptimizePerformance.diff
+          git apply ../All/SwapNetworkPort.diff
+          #git apply ../All/OptimizePerformance.diff
           
   
       - name: Customization Configuration
