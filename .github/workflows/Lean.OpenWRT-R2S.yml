@@ -36,10 +36,13 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           
-      - name: Enable Autocore
+      - name: Optimize Configuration
         run: |
           cd lede/
           git apply ../All/Autocore.diff
+          git apply ../All/SwapPort.diff
+          git apply ../All/OptimizePerformance.diff
+          
   
       - name: Customization Configuration
         run: |
