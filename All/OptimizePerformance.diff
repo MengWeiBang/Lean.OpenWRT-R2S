@@ -16,7 +16,7 @@ new file mode 100755
 index 000000000..bdc8eea7d
 --- /dev/null
 +++ b/target/linux/rockchip/armv8/base-files/etc/init.d/fa-rk3328-misc
-@@ -0,0 +1,11 @@
+@@ -0,0 +1,10 @@
 +#!/bin/sh /etc/rc.common
 +
 +START=96
@@ -27,4 +27,3 @@ index 000000000..bdc8eea7d
 +	[ -f /proc/irq/28/smp_affinity ] && echo 8 >/proc/irq/28/smp_affinity
 +	echo performance >/sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 +}
-+
