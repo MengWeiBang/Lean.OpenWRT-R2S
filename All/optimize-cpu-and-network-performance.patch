@@ -15,5 +15,3 @@ index 000000000..bdc8eea7d
 +	echo performance >/sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 +}
 +
--- 
-2.17.1
