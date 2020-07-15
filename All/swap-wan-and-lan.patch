@@ -11,6 +11,3 @@ index ed14d58a4..eac8233b9 100755
  	;;
  radxa,rock-pi-e)
  	ucidef_set_interfaces_lan_wan "eth1" "eth0"
--- 
-2.17.1
-
