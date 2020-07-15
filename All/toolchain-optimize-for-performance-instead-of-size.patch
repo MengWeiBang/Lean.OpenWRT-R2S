@@ -11,6 +11,3 @@ index be8075ec4..4b64de7a2 100644
    ifneq ($(findstring mips,$(ARCH)),)
      ifneq ($(findstring mips64,$(ARCH)),)
        CPU_TYPE ?= mips64
--- 
-2.17.1
-
