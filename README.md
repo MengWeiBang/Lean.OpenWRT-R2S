@@ -8,4 +8,6 @@
 
 4、系统盘≥64GB
 
+5、WAN口与LAN互换。
+
 [R2S](https://www.friendlyarm.com/index.php?route=product/product&path=69&product_id=282)修复autocore实时显示CPU频率和温度。
